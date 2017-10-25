@@ -91,6 +91,27 @@
 			path = Images;
 			sourceTree = "<group>";
 		};
+		52B83B791FA06DEE00313EE8 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				52DE84EA1F8CBF4300E9F1C2 /* InputViewController.swift */,
+				52DE84E81F8CBF3000E9F1C2 /* OutputViewController.swift */,
+				52DE84BC1F8CB75300E9F1C2 /* ViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		52B83B7A1FA06E1F00313EE8 /* Brain */ = {
+			isa = PBXGroup;
+			children = (
+				52A558FA1F9A0B9D00394B16 /* MyButton.swift */,
+				5254ABD51F8CE09500925A1E /* Delegate.swift */,
+				52DE84BA1F8CB75300E9F1C2 /* AppDelegate.swift */,
+				52DE84EC1F8CBF5300E9F1C2 /* CalcModel.swift */,
+			);
+			path = Brain;
+			sourceTree = "<group>";
+		};
 		52DE84AE1F8CB75200E9F1C2 = {
 			isa = PBXGroup;
 			children = (
@@ -114,18 +135,13 @@
 		52DE84B91F8CB75300E9F1C2 /* Calculator5 */ = {
 			isa = PBXGroup;
 			children = (
+				52B83B7A1FA06E1F00313EE8 /* Brain */,
+				52B83B791FA06DEE00313EE8 /* Controllers */,
 				520270CA1F9E3F100021E889 /* Assets.xcassets */,
 				520270C91F9E3D190021E889 /* Images */,
-				52DE84BA1F8CB75300E9F1C2 /* AppDelegate.swift */,
-				52DE84BC1F8CB75300E9F1C2 /* ViewController.swift */,
 				52DE84BE1F8CB75300E9F1C2 /* Main.storyboard */,
 				52DE84C31F8CB75300E9F1C2 /* LaunchScreen.storyboard */,
 				52DE84C61F8CB75300E9F1C2 /* Info.plist */,
-				52DE84E81F8CBF3000E9F1C2 /* OutputViewController.swift */,
-				52DE84EA1F8CBF4300E9F1C2 /* InputViewController.swift */,
-				52DE84EC1F8CBF5300E9F1C2 /* CalcModel.swift */,
-				5254ABD51F8CE09500925A1E /* Delegate.swift */,
-				52A558FA1F9A0B9D00394B16 /* MyButton.swift */,
 			);
 			path = Calculator5;
 			sourceTree = "<group>";

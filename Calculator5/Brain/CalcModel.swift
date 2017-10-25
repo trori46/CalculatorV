@@ -82,22 +82,27 @@ class CalcModel : CalculatorInterface {
     
     func digit(_ value: Double) {
         if value != Double.infinity && value != -(Double.infinity) && !value.isNaN {
-            if isDot == false {
+            /*if isDot == false {
                 input += (String)(value)
                 print(input)
             } else {
                 let val = (Int64)(value)
                 input += (String)(val)
                 print(input)
-            }
-        /*let val = (Int64)(value)
+            }*/
+            if  isValue(at: String(value)){
+                if isInt(at: String(value)){
+                let val = Int(value)
         let r  = value - (Double)(val)
         if r == 0 {
             input += (String)(val)
-            
+                    }
         } else {
+                    isDot = true
             input += (String)(value)
-        }*/
+                }} else {
+                input += (String)(value)
+            }
         print(input)
         isOp = false
         isEq = false
@@ -263,6 +268,14 @@ class CalcModel : CalculatorInterface {
         return false
     }
     
+    private func isInt(at char: String) -> Bool{// determine if number
+       let val = Double(char)
+        if val! <= Double(INT_MAX)
+        {
+            return true
+        }
+        return false
+    }
     private func isValue(at char: String) -> Bool{// determine if number
         if let _ = Double(char) {
             return true
@@ -393,9 +406,9 @@ class CalcModel : CalculatorInterface {
                     stack.append(log(value))
                     
                 default:
-                    
+                    if Double(value) != nil{
                     stack.append(Double(value)!)
-                    
+                    }
                 }
                 print(stack)
                 

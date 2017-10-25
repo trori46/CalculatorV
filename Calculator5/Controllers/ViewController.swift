@@ -73,10 +73,18 @@ class ViewController: UIViewController, InputInterfaceDelegate {
         case .dot:
             let lastValue = outputController?.currentOutput()
             if calcBrain.isDot == false && !checkIsOperation((lastValue?.last!)!){
+                if lastValue! != "0"{
                 calcBrain.isEq = false
                 calcBrain.utility(utility)
                 outputController?.display(utility.rawValue)
-                calcBrain.isDot = true}
+                } else{
+                    calcBrain.isEq = false
+                    calcBrain.digit(0)
+                    calcBrain.utility(utility)
+                    outputController?.display("0.")
+                }
+                
+            }
             else {
                 outputController?.display("")
             }
@@ -106,16 +114,19 @@ class ViewController: UIViewController, InputInterfaceDelegate {
     func constansPressed(_ const: Constants) {
         calcBrain.isDot = true
         calcBrain.isLeftBracket = false
-        if calcBrain.isLeftBracket == false {
+        if calcBrain.isLeftBracket == false && calcBrain.isOp == false{
             outputController?.cleanLabel()
             calcBrain.input = ""
             outputController?.display(calcBrain.const(const))
+            
             calcBrain.isEq = true
             calcBrain.isDot = true
         } else {
             outputController?.display(calcBrain.const(const))
+            
             calcBrain.isEq = true
             calcBrain.isDot = true
+ 
         }
     }
     func functionPressed(_ function: Function) {
@@ -145,7 +156,7 @@ class ViewController: UIViewController, InputInterfaceDelegate {
                 calcBrain.isEq = true
             } else {
                 outputController?.cleanLabel()
-                outputController?.display("Too big value")
+                outputController?.display("Error")
                 calcBrain.isEq = true
             }
                 }}}
