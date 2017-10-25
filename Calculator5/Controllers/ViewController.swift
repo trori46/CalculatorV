@@ -188,6 +188,7 @@ class ViewController: UIViewController, InputInterfaceDelegate {
         } else {
             if calcBrain.input.isEmpty{
                 calcBrain.input = ""
+                outputController?.display("0")
             } else {
              
                 if calcBrain.input.last == "." {
