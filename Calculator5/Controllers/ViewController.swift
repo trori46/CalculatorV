@@ -164,7 +164,7 @@ class ViewController: UIViewController, InputInterfaceDelegate {
     }
     
     func clear(_ clean: Memory) {
-        if (outputController?.currentOutput()?.hasSuffix("cos"))! || (outputController?.currentOutput()?.hasSuffix("sin"))! || (outputController?.currentOutput()?.hasSuffix("ctg"))!  || (outputController?.currentOutput()?.hasSuffix("tGh"))!{
+        if (outputController?.currentOutput()?.hasSuffix("cos"))! || (outputController?.currentOutput()?.hasSuffix("sin"))! || (outputController?.currentOutput()?.hasSuffix("ctg"))!  || (outputController?.currentOutput()?.hasSuffix("tgh"))!{
             calcBrain.input.removeLast()
             outputController?.clearLast()
             calcBrain.input.removeLast()
@@ -176,7 +176,7 @@ class ViewController: UIViewController, InputInterfaceDelegate {
             outputController?.clearLast()
             calcBrain.input.removeLast()
             outputController?.clearLast()
-        } else if (outputController?.currentOutput()?.hasSuffix("coSh"))! || (outputController?.currentOutput()?.hasSuffix("siNh"))!   {
+        } else if (outputController?.currentOutput()?.hasSuffix("cosh"))! || (outputController?.currentOutput()?.hasSuffix("sinh"))!   {
                 calcBrain.input.removeLast()
                 outputController?.clearLast()
                 calcBrain.input.removeLast()

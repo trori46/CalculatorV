@@ -170,7 +170,7 @@ class CalcModel : CalculatorInterface {
     private func seperateInputData(){ //function seperate inputData into math components
         print(input)
         var l = true
-        for ch in input.characters {
+        for ch in input{
             if ch == "-" && l == true{
                 inputDataArray.append("0")
             } else {
@@ -179,7 +179,7 @@ class CalcModel : CalculatorInterface {
         }
         
         
-        for charachter in input.characters {
+        for charachter in input{
             if isOperation(at: String(charachter)) {
                 inputDataArray.append(String(charachter))
             } else if isValue(at: String(charachter)){ //determine if last charachter is number,
@@ -187,6 +187,7 @@ class CalcModel : CalculatorInterface {
                     inputDataArray.append(String(charachter))
                 } else if isValue(at: inputDataArray[inputDataArray.count - 1])  {
                     inputDataArray[inputDataArray.count - 1] += String(charachter)
+        
                 } else {
                     inputDataArray.append(String(charachter)) //
                 }

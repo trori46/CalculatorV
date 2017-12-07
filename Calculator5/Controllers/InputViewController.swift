@@ -54,8 +54,17 @@ class InputViewController: UIViewController, InputInterface {
         } else if symbol == "%"{
             delegate?.functionPressed(Function(rawValue: symbol)!)
         }
-        else if symbol == "sin" || symbol == "cos" || symbol == "tg" || symbol == "ctg" || symbol == "ln" || symbol == "√" || symbol == "±" || symbol == "siNh" || symbol == "coSh" || symbol == "tGh" {
+        else if symbol == "sin" || symbol == "cos" || symbol == "tg" || symbol == "ctg" || symbol == "ln" || symbol == "√" || symbol == "±"  {
             delegate?.ifDigitAre(symbol)
+        }else if symbol == "sinh" || symbol == "cosh" || symbol == "tgh" {
+            if symbol == "sinh" {
+               delegate?.ifDigitAre("siNh")
+            }else if symbol == "cosh" {
+                delegate?.ifDigitAre("coSh")
+            }else if symbol == "tgh" {
+                delegate?.ifDigitAre("tGh")
+            }
+            
         } else {
             delegate?.display(symbol)
             
