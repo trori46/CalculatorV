@@ -75,7 +75,9 @@ class InputViewController: UIViewController, InputInterface {
     @IBAction func symbolPressed(_ sender: UIButton) {
         sender.flash()
         symbolPressed(sender.currentTitle!)
+        if mute == true {
         playClick()
+        }
     }
     private func playClick() {
         AudioServicesPlaySystemSound(1105)

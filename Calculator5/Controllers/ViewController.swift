@@ -8,7 +8,19 @@
 
 import UIKit
 
+var mute = Bool()
+
+
 class ViewController: UIViewController, InputInterfaceDelegate {
+    
+    @IBAction func muteVolume(_ sender: UISwitch) {
+        if sender.isOn {
+            mute = true
+        } else
+        {
+            mute = false
+        }
+    }
     
     
     var outputController : OutputInterface? = nil
